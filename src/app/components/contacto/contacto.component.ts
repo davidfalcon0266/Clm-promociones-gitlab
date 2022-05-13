@@ -26,7 +26,7 @@ export class ContactoComponent implements OnInit {
   }
 
   onSubmit() {
-    this.modalServ.showModal('confirmacion', 'success', this.formG.value.nombre+', Te contactaremos lo más pronto posible', 'Gracias por contactar');
+    this.modalServ.showModal('confirmacion', 'success', this.formG.value.nombre.toUpperCase() +', Te contactaremos lo más pronto posible', 'Gracias por solicitar');
   }
 }
 
