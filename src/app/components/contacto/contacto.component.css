@@ -39,3 +39,7 @@
         margin-top: 0px;
     }
 }
+
+.contenedor-auth.ajustMarg {
+    padding-bottom: 30px;
+}
