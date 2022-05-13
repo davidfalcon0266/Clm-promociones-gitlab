@@ -1,4 +1,4 @@
-<div class="contenedor-auth ajustMarg pt-2 animated slideInRight">
+<div class="contenedor-auth ajustMarg animated slideInRight">
    <div class="card-auth">
        <div class="card-body">
            <div class="contenedor-form">
@@ -8,7 +8,7 @@
                    </div>
                    <div class="campos mb-3">
                         <div class="input-group">
-                            <input autocomplete="off" class="form-control" [ngClass]="{'error': formG.controls.email.errors && formG.controls.email.errors.required && (formG.controls.email.dirty && formG.controls.email.touched) || formG.controls.email.errors && formG.controls.email.errors.pattern && (formG.controls.email.dirty && formG.controls.email.touched)}" placeholder="Email" name="email" formControlName="email"
+                            <input autocomplete="off" class="form-control" [ngClass]="{'error': formG.controls.email.errors && formG.controls.email.errors.required && (formG.controls.email.dirty || formG.controls.email.touched) || formG.controls.email.errors && formG.controls.email.errors.pattern && (formG.controls.email.dirty && formG.controls.email.touched)}" placeholder="Email" name="email" formControlName="email"
                              type="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>
                         </div>
                         <div class="text-danger text-start mb-3" *ngIf="formG.controls.email.errors && formG.controls.email.errors.required && (formG.controls.email.dirty || formG.controls.email.touched)">
@@ -21,7 +21,7 @@
                       
                    <div class="campos mb-3">
                         <div class="input-group">
-                            <input autocomplete="off" type="password" class="form-control" [ngClass]="{'error': formG.controls?.password?.errors && formG.controls?.password?.errors.required && (formG.controls?.password?.dirty && formG.controls?.password?.touched) || formG.controls?.password?.errors && formG.controls?.password?.errors.minlength && (formG.controls?.password?.dirty && formG.controls?.password?.touched)}" placeholder="Password"  name="password" formControlName="password"  required>
+                            <input autocomplete="off" type="password" class="form-control" [ngClass]="{'error': formG.controls?.password?.errors && formG.controls?.password?.errors.required && (formG.controls?.password?.dirty || formG.controls?.password?.touched) || formG.controls?.password?.errors && formG.controls?.password?.errors.minlength && (formG.controls?.password?.dirty && formG.controls?.password?.touched)}" placeholder="Password"  name="password" formControlName="password"  required>
                         </div>  
                         <div class="text-danger text-start mb-3" *ngIf="formG.controls?.password?.errors && formG.controls?.password?.errors.required && (formG.controls?.password?.dirty || formG.controls?.password?.touched)">
                             Campo Requerido

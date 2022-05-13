@@ -10,7 +10,12 @@
     background-image: linear-gradient(to bottom, #041d42, #18193c, #231536, #29102f, #2d0d27);
 }
 .contenedor-auth.ajustMarg {
-    padding-bottom: 30px;
+    padding: 100px 0;
+}
+@media (max-width: 767px) {
+    .contenedor-auth.ajustMarg {
+        padding: 50px 0;
+    }
 }
 .card-auth {
     position: relative;
@@ -31,6 +36,9 @@
 @media (max-width: 300px) {
     .card-auth.formMax {
        margin-top: 21px;
+    }
+    .contenedor-auth.ajustMarg {
+        padding: 50px 0;
     }
 }
 .card-body {
@@ -91,7 +99,12 @@ textarea:focus,
   outline: 0 none;
 }
 .form-check {
-    max-width: 83%;
+    max-width: 90%;
+}
+@media (max-width: 360px) {
+    .form-check {
+       max-width: 100%;
+    }
 }
 H1, h4 {
     font-family: 'ABeeZee', sans-serif;
@@ -166,7 +179,11 @@ animation-name: slideInDown;
 }
 .margin-aut {
     margin-top: -2px !important;
+    overflow-x: hidden !important;
 }
 
+body, html {
+    overflow-x: hidden !important;
+}
 
 

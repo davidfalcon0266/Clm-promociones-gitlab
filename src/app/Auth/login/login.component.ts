@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
       this.modalServ.hideModal();
       this.router.navigateByUrl('promociones');
       this.authServ.login(user);
-    }, 900);
+    }, 1500);
   }
 
 }

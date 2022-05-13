@@ -49,7 +49,7 @@ export class RegisterComponent implements OnInit {
       this.modalServ.hideModal();
       this.router.navigateByUrl('/promociones');
       this.authServ.register(user);
-    }, 900);
+    }, 1500);
   }
 
   validarPassword() {

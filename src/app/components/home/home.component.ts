@@ -26,6 +26,6 @@ export class HomeComponent implements OnInit {
       this.servPromocion.showPromotion = true;
       this.modalServ.hideModal();
       this.route.navigateByUrl('/promociones');
-    }, 900);
+    }, 1500);
   }
 }
