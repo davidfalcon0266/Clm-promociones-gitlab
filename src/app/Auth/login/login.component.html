@@ -8,20 +8,20 @@
                    </div>
                    <div class="campos mb-3">
                         <div class="input-group">
-                            <input autocomplete="off" class="form-control" [ngClass]="{'error': formG.controls.email.errors && formG.controls.email.errors.required && (formG.controls.email.dirty || formG.controls.email.touched) || formG.controls.email.errors && formG.controls.email.errors.pattern && (formG.controls.email.dirty && formG.controls.email.touched)}" placeholder="Email" name="email" formControlName="email"
+                            <input autocomplete="off" class="form-control" [ngClass]="{'error': formG.controls.email.errors && formG.controls.email.errors.required && (formG.controls.email.dirty || formG.controls.email.touched) || formG.controls.email.errors && formG.controls.email.errors.pattern && (formG.controls.email.dirty && formG.controls.email.touched)}" placeholder="Correo" name="email" formControlName="email"
                              type="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>
                         </div>
                         <div class="text-danger text-start mb-3" *ngIf="formG.controls.email.errors && formG.controls.email.errors.required && (formG.controls.email.dirty || formG.controls.email.touched)">
                             Campo Requerido
                         </div>
                         <div class="text-danger text-start mb-3" *ngIf="formG.controls.email.errors && formG.controls.email.errors.pattern && (formG.controls.email.dirty && formG.controls.email.touched)">
-                            Debe introducir una direccion e email valida
+                            Debe introducir una direccion de correo valida
                         </div>
                     </div>
                       
                    <div class="campos mb-3">
                         <div class="input-group">
-                            <input autocomplete="off" type="password" class="form-control" [ngClass]="{'error': formG.controls?.password?.errors && formG.controls?.password?.errors.required && (formG.controls?.password?.dirty || formG.controls?.password?.touched) || formG.controls?.password?.errors && formG.controls?.password?.errors.minlength && (formG.controls?.password?.dirty && formG.controls?.password?.touched)}" placeholder="Password"  name="password" formControlName="password"  required>
+                            <input autocomplete="off" type="password" class="form-control" [ngClass]="{'error': formG.controls?.password?.errors && formG.controls?.password?.errors.required && (formG.controls?.password?.dirty || formG.controls?.password?.touched) || formG.controls?.password?.errors && formG.controls?.password?.errors.minlength && (formG.controls?.password?.dirty && formG.controls?.password?.touched)}" placeholder="Contraseña"  name="password" formControlName="password"  required>
                         </div>  
                         <div class="text-danger text-start mb-3" *ngIf="formG.controls?.password?.errors && formG.controls?.password?.errors.required && (formG.controls?.password?.dirty || formG.controls?.password?.touched)">
                             Campo Requerido
@@ -32,7 +32,7 @@
                    </div> 
 
                    <div class="footer-button contenedor-btn">
-                       <button class="btn btn-success btn-custom mb-3" type="button" [disabled]="!formG.valid" (click)="onSubmit()">Login</button>
+                       <button class="btn btn-success btn-custom mb-3" type="button" [disabled]="!formG.valid" (click)="onSubmit()">Inicia Sesión</button>
                        <a routerLink="/register">
                            ¿No tienes cuenta? Registrate
                        </a>
