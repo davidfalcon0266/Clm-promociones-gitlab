@@ -1,0 +1,36 @@
+<div class="modal-producto" [ngClass]="{'show':show}" >
+    <div class="contenedor-modal">
+        <div class="header">
+            <p>{{title}}</p>
+            <div class="icon" (click)="hideModal()">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="contenido">
+            <div class="producto" *ngIf="tipo == 'beneficios'">
+                <p>Ofrece un servicio web de control de versiones y desarrollo de software colaborativo basado en Git. Además de ser un gestor de repositorios, ofrece generación de wikis y un sistema de seguimiento de errores.</p>
+                <p>Es fácil de configurar y administrar con sus códigos disponibles gratuitamente.</p>
+                <p>La aplicación es única y crea un flujo de trabajo optimizado con colaboración y eficiencia.</p>
+                <p>Las revisiones de código junto con las solicitudes de extracción son fáciles de usar y compactas.</p>
+                <p>Al ser una aplicación nativa de la nube con fuertes medidas de seguridad, ofrece características de seguridad como restricciones granulares, autenticación de usuario con Kerberos.</p>
+                <p>Integración mínima para reducir el ciclo de vida del desarrollo mientras aumenta la productividad.</p>
+                <p>Facilita una organización adecuada de Kubernetes y la integración.</p>
+            </div>
+            <div class="producto" *ngIf="tipo == 'caracteristicas'">
+                <p>Proporciona repositorios privados, sin perder funcionalidades y con una interfaz muy ligera y cómoda.</p>
+                <p>El servicio tiene gráficas para poder echar un vistazo rápido a la interacción de los desarrolladores con el proyecto, pero de una forma más simple.</p>
+                <p>Incorpora un sistema de wikis, que ayudan a poder documentar ciertos aspectos de nuestro código.</p>
+                <p>Ofrece una versión para empresas con personalización, funcionalidades extras , además de poder instalar en servidores propios GitLab (para lo cual nos ofrecen asesoramiento).</p>
+            </div>
+            <div class="producto"  *ngIf="tipo == 'tyc'">
+                <span>
+                    La compañía tomará medidas de seguridad con el fin de proteger la confidencialidad y datos del usuario,
+                    por lo que estos no serán publicados ni compartidos a terceros, en conformidad a la Ley 19.628,
+                    sobre protección de datos de carácter personal, es decir, solo serán utilizados para este tipo de transacción.
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+

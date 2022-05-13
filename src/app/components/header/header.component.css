@@ -1,0 +1,36 @@
+.bg-navbar {
+    min-height: 80px;
+    z-index: 999;
+    background: #0C1C41 !important;
+}
+.navbar-collapse {
+    flex-grow: 0;
+}   
+.navbar-nav {
+    align-items: center;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+    border: 1px solid #fff;
+}
+.navbar a {
+    color: #c897bf;
+}
+.navbar p {
+    color: #FBA329;
+    font-size: 20px;
+    margin-top: 13px;
+}
+@media (max-width: 992px) {
+    .navbar p {
+        display: none;
+    }
+    .hideMobile {
+        transition: .9s all;
+        display: none;
+    }
+}
+.active {
+    color: #fff !important;
+    font-weight: bold;
+}

@@ -1,0 +1,24 @@
+<div class="container mt-5 mb-5  animated slideInDown">
+    <div class="contenedor-general">
+        <div class="contenido-principal">
+            <h1 class="text-producto">¿Que es GitLab?</h1>
+            <div class="img-product">
+                <img src="../../../assets/img/gitlabDefinicion.jpg" alt="">
+            </div>
+        </div>
+        <p> <a target="_blank" href="https://about.gitlab.com/">Gitlab</a> fue creado en 2011 por desarrolladores ucranianos llamados Dmitriy Zaporozhets & Valery Sizov. Actualmente, tiene más de 100.000 usuarios y grandes empresas, como la NASA, IBM, Sony.  Es un repositorio de gestión de proyectos y, como se puede deducir desde el nombre, está construido sobre Git. Es decir, proporciona el código para generar un servidor y gestionar los clientes, sus operaciones y los servicios que ofrece.</p>
+        <p> A través de GitLab puedes administrar grupos, personas y los permisos que quieras que tengan los usuarios dentro de los grupos o proyectos a los que pertenezcan. Si estás buscando cómo aumentar la productividad laboral en tu empresa, esta herramienta puede ayudarte</p>
+        <p> También, te permite llevar a cabo un seguimiento del estado actual y del histórico de los proyectos, logrando ver todos los cambios y modificaciones producidas en el tiempo de desarrollo.</p>
+        <p>Teniendo presente que, GitLab es un software libre que puedes descargar e instalar en cualquier servidor, permitirá que lo uses en tu equipo personal, de manera profesional y en los ordenadores de tu organización sin ningún costo. </p>
+        
+        <h4 class="text-center mt-5 text-producto cursor-pointer ver-detalle" (click)="showModal('Beneficios de GitLab','beneficios')">¡Descubre los beneficios de usar GitLab!</h4>
+        <h4 class="text-center mt-4 text-producto cursor-pointer ver-detalle" (click)="showModal('Características de GitLab','caracteristicas')">¡Conoces sus principales características!</h4>
+
+        <div class="contactanos">
+            <p>Si quieres saber mas información sobre <a target="_blank" href="https://about.gitlab.com/">GITLAB</a> te dejo su pagina oficial <a a target="_blank" href="https://about.gitlab.com/">Aquí</a></p>
+        </div>
+    </div>
+</div>
+
+<!--Componente modal right-->
+<app-info-right (hide)="ocultarModal($event)" [show]="showModalRight" [title]="titleModal" [tipo]="tipoModal"></app-info-right>

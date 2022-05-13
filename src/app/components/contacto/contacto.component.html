@@ -1,0 +1,75 @@
+<div class="contacto animated slideInRight">
+    <div class="contenedor-contacto container pt-5">
+        <div class="text-contacto">
+            <p> Conversemos de tus desafíos.</p>
+            <p> Tenemos profesionales certificados en las principales tecnologías y con más de 10 años de experiencia en el mercado.</p>          
+            <p> ¡Escríbenos!</p>          
+            <p> Nos pondremos en contacto contigo cuanto antes.</p>          
+        </div>
+        <div class="formulario-contacto">
+            <div class="contacto-form contenedor-auth">
+                <div class="card-auth formMax">
+                    <div class="card-body">
+                        <div class="contenedor-form">
+                            <form [formGroup]="formG" class="formulario">
+                                <div class="icon-form">
+                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                </div>          
+                                <div class="campos mb-3">
+                                    <input autocomplete="off" type="text" placeholder="Nombre" class="form-control" [ngClass]="{'error': formG.controls.nombre.errors && formG.controls.nombre.errors.required && (formG.controls.nombre.dirty || formG.controls.nombre.touched) || formG.controls.nombre.errors && formG.controls.nombre.errors.pattern && (formG.controls.nombre.dirty || formG.controls.nombre.touched)}" name="name" name="nombre" formControlName="nombre" required
+                                        pattern="[a-zA-Z ]*">
+                                    <div class="text-danger text-start mb-3" *ngIf="formG.controls.nombre.errors && formG.controls.nombre.errors.required && (formG.controls.nombre.dirty || formG.controls.nombre.touched)">
+                                        Campo Requerido
+                                    </div>
+                                    <div class="text-danger text-start mb-3" *ngIf="formG.controls.nombre.errors && formG.controls.nombre.errors.pattern && (formG.controls.nombre.dirty || formG.controls.nombre.touched)">
+                                        No se permiten Numeros
+                                    </div>
+                                </div>
+            
+                                <div class="campos mb-3">
+                                     <div class="input-group">
+                                         <input autocomplete="off" type="email" class="form-control" [ngClass]="{'error': formG.controls.email.errors && formG.controls.email.errors.required && (formG.controls.email.dirty || formG.controls.email.touched) || formG.controls.email.errors && formG.controls.email.errors.pattern && (formG.controls.email.dirty && formG.controls.email.touched)}" placeholder="Email" name="email" formControlName="email"
+                                         pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>
+                                     </div>
+                                     <div class="text-danger text-start mb-3" *ngIf="formG.controls.email.errors && formG.controls.email.errors.required && (formG.controls.email.dirty || formG.controls.email.touched)">
+                                         Campo Requerido
+                                     </div>
+                                     <div class="text-danger text-start mb-3" *ngIf="formG.controls.email.errors && formG.controls.email.errors.pattern && (formG.controls.email.dirty && formG.controls.email.touched)">
+                                         Debe introducir una direccion e email valida
+                                     </div>
+                                 </div>
+
+                                 <div class="campos mb-3">
+                                    <input autocomplete="off" type="text" placeholder="Asunto" class="form-control" [ngClass]="{'error': formG.controls.asunto.errors && formG.controls.asunto.errors.required && (formG.controls.asunto.dirty || formG.controls.asunto.touched) || formG.controls.asunto.errors && formG.controls.asunto.errors.pattern && (formG.controls.asunto.dirty || formG.controls.asunto.touched)}" name="asunto" formControlName="asunto"
+                                        required pattern="[a-zA-Z ]*">
+                                    <div class="text-danger text-start mb-3" *ngIf="formG.controls.asunto.errors && formG.controls.asunto.errors.required && (formG.controls.asunto.dirty || formG.controls.asunto.touched)">
+                                        Campo Requerido
+                                    </div>
+                                    <div class="text-danger text-start mb-3" *ngIf="formG.controls.asunto.errors && formG.controls.asunto.errors.pattern && (formG.controls.asunto.dirty || formG.controls.asunto.touched)">
+                                        No se permiten Numeros
+                                    </div>
+                                </div>
+                                   
+                                <div class="campos mb-3">
+                                    <textarea class="form-control"  placeholder="Mensaje" id="exampleFormControlTextarea1"  name="mensaje" formControlName="mensaje" [ngClass]="{'error': formG.controls?.mensaje?.errors && formG.controls?.mensaje?.errors.required && (formG.controls?.mensaje?.dirty || formG.controls?.mensaje?.touched) || formG.controls?.mensaje?.errors && formG.controls?.mensaje?.errors.minlength && (formG.controls?.mensaje?.dirty && formG.controls?.mensaje?.touched)}"  required rows="3"></textarea>
+                                    <div class="text-danger text-start mb-3" *ngIf="formG.controls?.mensaje?.errors && formG.controls?.mensaje?.errors.required && (formG.controls?.mensaje?.dirty || formG.controls?.mensaje?.touched)">
+                                        Campo Requerido
+                                    </div>
+                                    <div class="text-danger text-start mb-3" *ngIf="formG.controls?.mensaje?.errors && formG.controls?.mensaje?.errors.minlength && (formG.controls?.mensaje?.dirty && formG.controls?.mensaje?.touched)">
+                                        Minimo 5 caracteres
+                                    </div>
+                                </div> 
+            
+                                <div class="footer-button contenedor-btn">
+                                    <button class="btn btn-success btn-custom" type="button" [disabled]="!formG.valid" (click)="onSubmit()">
+                                        Enviar
+                                    </button>
+                                </div>   
+                            </form>
+                        </div>
+                    </div>
+                </div>
+             </div>              
+        </div>
+    </div>
+</div>

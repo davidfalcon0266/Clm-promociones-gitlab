@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "promociones"
+  "defaultProject": "promociones",
+  "cli": {
+    "analytics": false
+  }
 }

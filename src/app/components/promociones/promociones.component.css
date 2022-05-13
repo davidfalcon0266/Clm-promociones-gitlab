@@ -1,0 +1,15 @@
+.container-promo {
+    max-width: 600px;
+    width: 100%;
+}
+
+.img-gitlab {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.promocion-gitlab {
+    max-width: 760px;
+    width: 100%;
+    margin: 0 auto 20px;
+}

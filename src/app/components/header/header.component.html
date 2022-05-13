@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark bg-navbar">
+  <div class="container-fluid container">
+    <a class="navbar-brand cursor-pointer" (click)="servPromocion.showPromotion = false;servPromocion.showProduct = false" routerLinkActive="active" routerLink="">CLM TECNOLOGY</a>
+    <div class="user">
+      <p *ngIf="authServ.userAct">{{authServ.userAct | titlecase}}</p>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span (click)="mobile = false" class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav cursor-pointer">
+        <li class="nav-item" *ngIf="servPromocion.showProduct">
+          <a class="nav-link" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="producto">Producto</a>
+        </li>
+        <li class="nav-item" *ngIf="servPromocion.showPromotion || authServ.userAct">
+          <a class="nav-link"  (click)="servPromocion.showProduct = false" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLinkActive="active" routerLink="promociones">Promociones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="contacto">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="!authServ.userAct" routerLinkActive="active"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="!authServ.userAct" routerLinkActive="active"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="register">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="authServ.userAct"><i (click)="logout()" class="fa fa-sign-out" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

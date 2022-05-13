@@ -1,0 +1,33 @@
+<div class="modal animated slideInRight" *ngIf="modalService.show">
+    <!--Loader generar de peticiones-->
+    <div class="loader" *ngIf="modalService.tipoModal == 'loader'">
+        <div class="gif">
+            <img src="../../../assets/img/loading-gif.gif" alt="loading">
+        </div>
+    </div>
+
+    <!--Confirm logout/success contact-->
+    <div class="contenedor-modal" *ngIf="modalService.tipoModal == 'logout' || modalService.tipoModal == 'confirmacion'">
+        <div class="icono">
+            <span *ngIf="modalService.icono == 'warning'">
+                <i class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></i>
+            </span>
+            <span *ngIf="modalService.icono == 'success'">
+                <i class="fa fa-check text-success" aria-hidden="true"></i>
+            </span>
+        </div>
+        <div class="titulo">
+           {{modalService.titulo}}
+        </div>
+        <div class="subtitulo">
+            {{modalService.subtitulo}}
+        </div>
+
+        <div class="footer-modal contenedor-btn-modal" (click)="modalService.hideModal()">
+            <button class="btn btn-success btn-custom btn-danger" *ngIf="modalService.tipoModal == 'logout'" (click)="logout()">Confirmar</button>
+            <button class="btn btn-success btn-custom" *ngIf="modalService.tipoModal == 'logout'">Cancelar</button>
+            <button class="btn btn-success btn-custom mx-auto" routerLink="" *ngIf="modalService.tipoModal == 'confirmacion'">Ok</button>
+        </div>
+    </div>
+</div>
+
