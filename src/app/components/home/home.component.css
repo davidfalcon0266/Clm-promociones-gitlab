@@ -42,6 +42,7 @@
     margin: 0 auto;
     text-align: center;
     position: absolute;
+    top: 40%;
     z-index: 99;
 }
 @media (max-width: 992px) {
