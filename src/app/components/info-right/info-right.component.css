@@ -46,6 +46,11 @@
     align-items: center;
     cursor: pointer;
 }
+.icon:hover {
+    background-color: #F7A224;
+    transition: .5s all;
+    color: #fff !important;
+}
 @media (max-width: 300px) {
     .icon {
        left: 8px;
@@ -53,6 +58,9 @@
 }
 .icon i {
     color: #0C1C41;
+}
+.icon i:hover{
+    color: #fff;
 }
 .contenido {
     width: 88%;

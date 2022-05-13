@@ -1,4 +1,4 @@
-<div class="modal-producto" [ngClass]="{'show':show}" >
+<div class="modal-producto" (click)="hideModal()" [ngClass]="{'show':show}" >
     <div class="contenedor-modal">
         <div class="header">
             <p>{{title}}</p>

@@ -19,10 +19,10 @@
           <a class="nav-link" routerLinkActive="active"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="contacto">Contáctanos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" *ngIf="!authServ.userAct" routerLinkActive="active"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="login">Login</a>
+          <a class="nav-link" *ngIf="!authServ.userAct" routerLinkActive="active"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="login">Inicia sesión</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" *ngIf="!authServ.userAct" routerLinkActive="active"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="register">Register</a>
+          <a class="nav-link" *ngIf="!authServ.userAct" routerLinkActive="active"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" routerLink="register">Registro</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" *ngIf="authServ.userAct"><i (click)="logout()" class="fa fa-sign-out" aria-hidden="true"></i></a>
